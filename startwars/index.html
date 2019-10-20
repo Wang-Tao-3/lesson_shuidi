@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>星球大战</title>
+    <style>
+    *
+    {
+        margin: 0;
+        padding: 0;
+    }
+    body
+    {
+        background: url('./images/bg.jpg');
+    }
+    .starwars-demo
+    {
+        position: absolute;
+        top:50%;
+        left:50%;/*l50p*/
+        width: 17em;/*w17em*/
+        height: 34em;/*h34em*/
+        transform:translate(-50%,-50%);
+        perspective: 800px;/*3D支持*/
+        transform-style: preserve-3d;
+    }
+    .start,.wars
+    {
+        position: absolute;
+        
+    }
+    .star
+    {
+        top: -0.075em;
+        animation:star 10s ease-out infinite;/*样式 持续时间 变速运动 无限循环*/
+    }
+    .wars
+    {
+        bottom: -0.5em;
+        animation: star 10s ease-out infinite;
+    }
+    @keyframes star
+    {
+        0%
+        {
+            opacity:0;/*透明度*/
+
+            transform: scale(1.5);
+        }
+        20%
+        {
+            opacity: 1;
+        }
+        89%
+        {
+            opacity: 1;
+            transform: scale(1);
+        }
+        100%
+        {
+            opacity: 1;
+            transform: translateZ(-400em);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="stardemo-demo">
+      <img src="./images/star.svg" alt="" class="star">
+      <img src="./images/wars.svg" alt="" class="wars">
+</div> -->
+    <div class="starwars-demo">
+        <img src="./images/star.svg" alt="" class="star">
+        <img src="./images/wars.svg" alt="" class="star">
+        <h2 class="byline">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </h2>
+    </div>
+</body>
+
+</html>
