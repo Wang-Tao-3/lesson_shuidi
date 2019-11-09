@@ -1,0 +1,4 @@
+.section{
+  height: 100vh;/*相对单位，占屏100%*/
+  /* background-color: red; */
+}
